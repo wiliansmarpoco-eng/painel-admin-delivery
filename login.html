@@ -125,9 +125,9 @@
   </div>
 
   <script>
-    const API_URL = window.location.hostname === "localhost"
-      ? "http://localhost:3000"
-      : "https://delivery-saas-production-caba.up.railway.app";
+   const API_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:3000"
+  : "https://delivery-saas-production-caba.up.railway.app";
 
     async function entrar() {
       const email = document.getElementById("email").value.trim();
